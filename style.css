@@ -1,0 +1,257 @@
+/*
+Objetivo de la práctica:
+
+Aprender a maquetar sin flex ni grid, únicamente con inline-block.
+Usar @media queries con la sintaxis nueva (width <= 600px) para adaptar el diseño a móvil.
+Implementar modo oscuro automático con @media (prefers-color-scheme: dark).
+*/
+
+body {
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: #eeff00;
+    color: #000;
+    text-align: center;
+}
+
+header {
+    padding: 10px;
+    border-bottom: 2px solid #000;
+}
+
+h1 {
+    display: inline-block;
+    margin: 0;
+    font-size: 3rem;
+    vertical-align: middle;
+}
+
+nav {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 25%;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+}
+
+nav li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    transition: all 0.2s ease;
+}
+
+nav a:hover {
+    color: #28291c;
+}
+
+ul {
+    list-style-type: none;
+}
+
+main {
+    padding: 20px;
+}
+
+footer {
+    padding: 10px;
+    border-top: 2px solid #000;
+}
+
+footer ul {
+    display: inline-block;
+}
+
+.primera img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    border-radius: 1rem;
+}
+
+.primera p {
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+
+.segunda {
+    margin-top: 25px;
+}
+
+.segunda .bloque:first-child {
+    border-right: 3px solid #000;
+    padding-right: 3rem;
+}
+
+.segunda .bloque:last-child {
+    padding-left: 3rem;
+}
+
+.bloque {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.informacion-evento {
+    text-align: left;
+}
+
+.icono-comprar {
+    margin-left: 8px;
+}
+
+button {
+    background-color: #000;
+    color: #eeff00;
+    padding: 20px 30px;
+    border: 1px solid #eeff00;
+    border-radius: 100rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: all 0.5s;
+}
+
+button:hover {
+    background-color: #eeff00;
+    color: #000;
+    font-weight: bold;
+    padding: 40px 30px;
+    border-radius: 0rem;
+    border: 2px solid #000
+}
+
+.tercera {
+    margin-top: 20px;
+    text-align: left;
+}
+
+.tercera article {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 1rem;
+}
+
+footer {
+    background-color: #eeff00;
+    padding: 20px;
+    margin-top: 30px;
+    border-top: 1px solid #000;
+}
+
+footer i {
+    font-size: 1.5em;
+}
+
+footer ul {
+    padding: 0;
+    margin: 0;
+}
+
+footer li {
+    display: inline-block;
+    margin: 40px 10px;
+}
+
+footer a {
+    color: inherit;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #8c9915;
+}
+
+/*Modo oscuro por defecto*/
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+        color: #eeff00;
+        font-family: monospace, 'Courrier New';
+    }
+
+    header, footer {
+        background-color: #111;
+    }
+
+    nav a {
+        text-decoration: none;
+        color: #eeff00;
+        font-weight: bold;
+        transition: all 0.2s ease;
+    }
+
+    nav a:hover {
+        color: #8c9915;
+    }
+
+    .segunda .bloque:first-child {
+        border-right: 3px solid #eeff00;
+        padding-right: 3rem;
+    }
+
+    button {
+        color: #fff;
+    }
+
+    button:hover {
+        background-color: #eeff00;
+    }
+
+    nav a:hover, footer a:hover {
+        color: #8c9915;
+    }
+
+    footer {
+        padding: 10px;
+        border-top: 2px solid #eeff00;
+    }
+
+    header {
+        padding: 10px;
+        border-bottom: 1px solid #eeff00;
+    }
+}
+
+
+
+@media (width <= 600px) {
+    nav li {
+        display: block;
+        margin: 15px 0;
+    }
+
+    .bloque {
+        display: block;
+        width: 100%;
+    }
+
+    .segunda .bloque:first-child {
+        border-bottom: 3px solid;
+        padding-bottom: 2rem;
+    }
+
+    .segunda .bloque:last-child {
+        margin: 0;
+        padding: 2rem 0 0 0;
+    }
+
+    button {
+        width: 80%;
+    }
+}

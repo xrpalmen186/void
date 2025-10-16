@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Periódico Digital</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      background: #222;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      display: flex;
+      min-height: 80vh;
+    }
+
+    nav {
+      background: #333;
+      color: #fff;
+      width: 220px;
+      padding: 1rem;
+      transition: all 0.3s ease;
+    }
+
+    nav.hidden {
+        transform: translateX(-100%);
+        display: none;
+    }
+
+    nav ul {
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0.5rem 0;
+    }
+
+    nav ul li a:hover {
+      cursor: pointer;
+      transition: all 0.2s ease;
+      background-color: #ccc;
+      color: #333;
+      border-radius: 5px;
+      padding: 0.5rem 0.5rem 0.5rem 2.5rem;
+      margin-left: 0.5rem;
+      font-size: 1.3rem;
+    }
+
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: all 0.8s ease;
+    }
+
+    main {
+      flex: 1;
+      padding: 1.5rem;
+      background: #fff;
+    }
+
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+      background-color: #f1f1f1;
+      padding: 1rem;
+      border: 1px solid #bebebea8;
+      border-radius: 1rem;
+    }
+
+    article {
+      background: #fafafa;
+      padding: 1rem;
+      border-radius: 1rem;
+      border: 1px solid #bebebea8;
+    }
+
+    form {
+      background: #f1f1f1;
+      padding: 1rem;
+      border-radius: 1rem;
+      border: 1px solid #bebebea8;
+    }
+
+    form input, form textarea, form button {
+      width: 100%;
+      margin: 0.5rem 0;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      background: #333;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #222;
+      color: #fff;
+      text-align: center;
+      padding: 4rem;
+    }
+
+    .menu-icon-open {
+        display: none;
+    }
+
+    .menu-icon-close {
+        display: block;
+    }
+
+    .menu-icon-open,
+    .menu-icon-close {
+        font-size: 1rem;
+    }
+
+    .toggle-btn {
+      background: #444;
+      color: #fff;
+      border: none;
+      padding: 0.5rem 0.7rem;
+      cursor: pointer;
+      z-index: 1000;
+      border-radius: 4px;
+    }
+
+    .menu-toggle {
+        text-align: right;
+    }
+
+    @media (max-width: 768px) {
+      section {
+        grid-template-columns: 1fr;
+      }
+      nav {
+        position: absolute;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu-toggle">
+        <button class="toggle-btn" onclick="toggleNav()">
+            <i class="menu-icon-open fa-solid fa-bars"></i>
+            <i class="menu-icon-close fa-solid fa-xmark"></i>
+        </button>
+    </div>
+    <h1>Periódico Digital</h1>
+    <p>Las noticias al instante</p>
+  </header>
+
+  <div class="container">
+    <nav id="sidebar">
+        <ul>
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Política</a></li>
+            <li><a href="#">Deportes</a></li>
+            <li><a href="#">Tecnología</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+      <section>
+        <article>
+            <h2>Noticia 1</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque sit amet accumsan arcu.</p>
+        </article>
+        <article>
+            <h2>Noticia 2</h2>
+            <p>Phasellus ac lacus vel ligula fermentum aliquam. Aenean commodo justo et nibh hendrerit cursus.</p>
+        </article>
+      </section>
+
+      <form>
+        <h2>Contáctanos</h2>
+        <input type="text" placeholder="Nombre" required>
+        <input type="email" placeholder="Correo electrónico" required>
+        <textarea rows="4" placeholder="Escribe tu mensaje..."></textarea>
+        <button type="submit">Enviar</button>
+      </form>
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 Periódico Digital. Todos los derechos reservados.</p>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/47b78de0a8.js" crossorigin="anonymous"></script>
+
+  <script>
+    function toggleNav() {
+      document.getElementById('sidebar').classList.toggle('hidden');
+    }
+  </script>
+
+  <script>
+
+    document.addEventListener("DOMContentLoaded", () => {
+        const openIcon = document.querySelector('.menu-icon-open');
+        const closeIcon = document.querySelector('.menu-icon-close');
+        openIcon.style.display = 'none';   // Mostrar ☰
+        closeIcon.style.display = 'block';   // Ocultar ✖
+    });
+
+    function toggleNav() {
+        const sidebar = document.getElementById('sidebar');
+        const openIcon = document.querySelector('.menu-icon-open');
+        const closeIcon = document.querySelector('.menu-icon-close');
+
+        sidebar.classList.toggle('hidden');
+
+        // Cambiar icono según estado
+        if (sidebar.classList.contains('hidden')) {
+        openIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+        } else {
+        openIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+        }
+    }
+    </script>
+</body>
+</html>

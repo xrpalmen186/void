@@ -1,0 +1,313 @@
+:root {
+    --color-header: rgb(2, 2, 45);
+    --color-hero: #007FFC;
+    --color-menu: #ea3b3b;
+    --color-banner: #e3d764;
+    --color-extra: #52f09c;
+    --color-image: #abf6d8;
+    --color-main: #080a2a;
+}
+
+* {
+    box-sizing: border-box; /*el padding no suma al tamaño total*/
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--color-header);
+    padding: 25px;
+    text-align: center;
+    clear: both;
+    color: #fff;
+    width: 20%;
+}
+
+.menu-desktop {
+    background-color: var(--color-menu);
+    padding: 20px;
+    text-align: center;
+    color: #fff;
+    width: 80%;
+}
+
+.menu-tablet {
+    display: none;
+    color: #fff;
+    align-content: center;
+}
+
+.bloque-superior {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.bloque-secundario {
+    display: flex;
+    flex-direction: row;
+}
+
+.bloque-tercero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.hero {
+    background-color: var(--color-hero);
+    padding: 220px;
+    text-align: center;
+    color: #fff;
+}
+
+main {
+    background-color: var(--color-main);
+    padding: 120px;
+    text-align: center;
+    color: white;
+    width: 50%;
+}
+
+.banner-desktop {
+    display: block;
+    background-color: var(--color-banner);
+    padding: 40px;
+    text-align: center;
+}
+
+.banner {
+    display: none;
+}
+
+.extra {
+    background-color: var(--color-extra);
+    padding: 50px;
+    text-align: center;
+}
+
+.image {
+    background-color: var(--color-image);
+    padding: 80px;
+    text-align: center;
+}
+
+/*TABLET*/
+
+@media screen and (max-width: 1024px) {
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        box-sizing: border-box;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header {
+        background-color: var(--color-header);
+        padding: 25px;
+        text-align: center;
+        clear: both;
+        color: #fff;
+        width: 100%;
+    }
+
+    .bloque-superior {
+        display: flex;
+        width: 100%;
+    }
+
+    .bloque-principal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        flex-grow: 1;
+    }
+
+    .bloque-secundario {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        width: 100%;
+    }
+
+    .bloque-tercero {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+        justify-content: space-between;
+    }
+
+    .menu-desktop {
+        display: none;
+    }
+
+    .menu-tablet {
+        display: block;
+        background-color: var(--color-menu);
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        width: 20%;
+    }
+
+    .hero {
+        background-color: var(--color-hero);
+        padding: 90px;
+        text-align: center;
+        color: #fff;
+    }
+
+    main {
+        background-color: var(--color-main);
+        padding: 120px;
+        text-align: center;
+        color: white;
+        width: 100%;
+    }
+
+    .banner {
+        display: block;
+        background-color: var(--color-banner);
+        padding: 40px;
+        text-align: center;
+    }
+
+    .extra {
+        background-color: var(--color-extra);
+        padding: 40px;
+        text-align: center;
+        width: 70%;
+    }
+
+    .image {
+        background-color: var(--color-image);
+        padding: 40px;
+        text-align: center;
+        width: 30%;
+    }
+
+    .banner-desktop {
+        display: none;
+    }
+}
+
+/*MOVIL*/
+
+@media screen and (max-width: 600px) {
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #f2f2f2;
+        box-sizing: border-box;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    header {
+        background-color: var(--color-header);
+        padding: 20px;
+        text-align: center;
+        clear: both;
+        color: #fff;
+        width: 100%;
+    }
+
+    .bloque-superior {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .banner-desktop {
+        display: none;
+    }
+
+    .bloque-principal {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .bloque-secundario {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .bloque-tercero {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .menu-desktop {
+        display: block;
+        background-color: var(--color-menu);
+        padding: 20px;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+    }
+
+    .menu-tablet {
+        display: none;
+    }
+
+    .hero {
+        background-color: var(--color-hero);
+        padding: 90px;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+    }
+
+    main {
+        background-color: var(--color-main);
+        padding: 120px;
+        text-align: center;
+        color: white;
+        width: 100%;
+    }
+
+    .banner {
+        display: block;
+        background-color: var(--color-banner);
+        padding: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .extra {
+        background-color: var(--color-extra);
+        padding: 50px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .image {
+        background-color: var(--color-image);
+        padding: 50px;
+        text-align: center;
+        width: 100%;
+    }
+}
