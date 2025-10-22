@@ -9,7 +9,7 @@
 }
 
 * {
-    box-sizing: border-box; /*el padding no suma al tamaño total*/
+    box-sizing: border-box; /*el padding no suma al tamaño total tanto en desktop, movil o tablet*/
 }
 
 body {
