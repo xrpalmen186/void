@@ -17,11 +17,10 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
     min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     max-width: 100%;
     overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 header {
@@ -107,16 +106,6 @@ main {
 /*TABLET*/
 
 @media screen and (max-width: 1024px) {
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-        box-sizing: border-box;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
 
     header {
         width: 100%;
@@ -196,16 +185,6 @@ main {
 /*MOVIL*/
 
 @media screen and (max-width: 600px) {
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-        background-color: #f2f2f2;
-        box-sizing: border-box;
-        min-height: 100vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-    }
 
     header {
         padding: 20px;
