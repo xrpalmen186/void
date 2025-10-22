@@ -88,6 +88,7 @@ main {
 }
 
 .banner {
+    background-color: var(--color-banner);
     display: none;
 }
 
@@ -118,11 +119,6 @@ main {
     }
 
     header {
-        background-color: var(--color-header);
-        padding: 25px;
-        text-align: center;
-        clear: both;
-        color: #fff;
         width: 100%;
     }
 
@@ -166,39 +162,28 @@ main {
     }
 
     .hero {
-        background-color: var(--color-hero);
         padding: 90px;
-        text-align: center;
-        color: #fff;
     }
 
     main {
-        background-color: var(--color-main);
         padding: 120px;
-        text-align: center;
-        color: white;
         width: 100%;
     }
 
     .banner {
         display: block;
-        background-color: var(--color-banner);
         padding: 100px;
         text-align: center;
     }
 
     .extra {
-        background-color: var(--color-extra);
         padding: 40px;
-        text-align: center;
         align-content: center;
         width: 70%;
     }
 
     .image {
-        background-color: var(--color-image);
         padding: 40px;
-        text-align: center;
         align-content: center;
         width: 30%;
     }
@@ -223,11 +208,8 @@ main {
     }
 
     header {
-        background-color: var(--color-header);
         padding: 20px;
-        text-align: center;
         clear: both;
-        color: #fff;
         width: 100%;
     }
 
@@ -265,10 +247,7 @@ main {
 
     .menu-desktop {
         display: block;
-        background-color: var(--color-menu);
         padding: 20px;
-        text-align: center;
-        color: #fff;
         width: 100%;
     }
 
@@ -277,40 +256,28 @@ main {
     }
 
     .hero {
-        background-color: var(--color-hero);
         padding: 90px;
-        text-align: center;
-        color: #fff;
         width: 100%;
     }
 
     main {
-        background-color: var(--color-main);
         padding: 150px;
-        text-align: center;
-        color: white;
         width: 100%;
     }
 
     .banner {
         display: block;
-        background-color: var(--color-banner);
         padding: 50px;
-        text-align: center;
         width: 100%;
     }
 
     .extra {
-        background-color: var(--color-extra);
         padding: 50px;
-        text-align: center;
         width: 100%;
     }
 
     .image {
-        background-color: var(--color-image);
         padding: 50px;
-        text-align: center;
         width: 100%;
     }
 }
