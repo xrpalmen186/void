@@ -75,6 +75,7 @@ main {
     background-color: var(--color-main);
     padding: 120px;
     text-align: center;
+    align-content: center;
     color: white;
     width: 50%;
 }
