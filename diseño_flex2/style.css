@@ -1,0 +1,139 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    min-height: 100vh;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+}
+
+.carrusel-imagenes {
+    display: flex;
+    flex-direction: column;
+    width: 70px;
+}
+
+.imagen-card {
+    background-color: #ccc;
+    margin: 10px;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.imagen-principal {
+    margin: 10px;
+    width: 500px;
+}
+
+.imagen-principal img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/* .boton-compartir {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+} */
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.num-estrellas {
+    align-content: center;
+}
+
+.bloque-valoraciones {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 20px;
+    align-content: center;
+    margin-top: 10px;
+}
+
+.num-valoraciones {
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.fa-star {
+    color: #ff9d00;
+}
+
+.bloque-contenido-principal {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.oferta-prime {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.oferta-prime i {
+    color: #575757;
+    font-size: 1.2rem;
+    margin-right: 10px;
+    align-content: center;
+}
+
+.mini-bloque-oferta {
+    background-color: #e72525;
+    border-radius: 5px;
+    padding: 10px;
+    color: #fff;
+}
+
+.bloque-precios {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+}
+
+.precio-descuento {
+    align-content: center;
+    color: #e72525;
+    font-size: 2.3rem;
+}
+
+.precio-principal {
+    align-content: center;
+    font-size: 2.3rem;
+}
+
+.precio-cents {
+    font-size: 1rem;
+}
