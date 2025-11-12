@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Detalle - Película</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container header-inner">
+                <div class="brand"><h1>CINE</h1></div>
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="index.html#cartelera">Cartelera</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <article class="movie-detail">
+                <div class="detail-grid"
+                    style="display:grid;grid-template-columns: 300px 1fr;gap:1rem;align-items:start;">
+                    <div>
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fproject_modules%2F1400%2Fffdc5e90601171.5e1c27d79a475.jpg&f=1&nofb=1&ipt=300b29608735987ea05179c932097d958aaddcab28e39596bacc6faaddc51899" alt="Poster"
+                            style="width: 100%; border-radius: 12px;" />
+                    </div>
+                    <div>
+                        <h2>STAR WARS - The Rise of Skywalker</h2>
+                        <p class="meta">Acción / Ciencia ficción · 2h 10m</p>
+                        <p><strong>Director:</strong> Raimundo Palma M.</p>
+                        <p><strong>Reparto:</strong> Actor 1, Actor 2, Actor
+                            3</p>
+
+                        <h3>Sinopsis</h3>
+                        <p>Un viaje épico más allá de las estrellas. En un
+                            futuro no muy lejano...</p>
+
+                        <div style="margin-top: 2rem;">
+                            <a class="btn primary" href="#">Comprar entradas</a>
+                            <a class="btn primary" id="btn-trailer" href="#">Ver trailer</a>
+                        </div>
+                    </div>
+                </div>
+
+                <section style="margin-top: 1.2rem;">
+                    <h3>Horarios Disponibles</h3>
+                    <ul>
+                        <li>12:00</li>
+                        <li>16:15</li>
+                        <li>19:45</li>
+                        <li>22:30</li>
+                    </ul>
+                </section>
+            </article>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-brand">
+                    <h4>CINE</h4>
+                    <p>Tu cine de confianza</p>
+                </div>
+
+                <div class="footer-contacts">
+                    <p>Montequinto, Sevilla</p>
+                    <p>Tlf: +34 900 123 456</p>
+                </div>
+
+                <div class="socials">
+                    <a href="#" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+
+
+        <!-- Popup del trailer -->
+        <div class="trailer-modal" id="trailerModal">
+            <div class="trailer-content">
+                <span class="close-btn" id="closeTrailer">&times;</span>
+                <iframe
+                id="trailerFrame"
+                width="800"
+                height="450"
+                src=""
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+
+        <script src="main.js"></script>
+        <script src="https://kit.fontawesome.com/47b78de0a8.js" crossorigin="anonymous"></script>
+    </body>
+</html>

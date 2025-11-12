@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>CINE - StarAdventure</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container header-inner">
+                <div class="brand">
+                    <h1>CINE</h1>
+                </div>
+
+                <nav class="main-nav" aria-label="Menú principal">
+                    <ul>
+                        <li><a href="#home">Inicio</a></li>
+                        <li><a href="#cartelera">Cartelera</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#" id="where-link">¿Dónde estamos?</a></li>
+                    </ul>
+                </nav>
+
+                <div class="comprar-entradas">
+                    <button class="btn primary">Comprar entradas</button>
+                </div>
+            </div>
+        </header>
+
+        <main id="home">
+            <!-- Hero / slider style -->
+            <section class="hero">
+                <div class="hero-content container">
+                    <h2 class="title">STARADVENTUR</h2>
+                    <div class="rating" aria-hidden="true">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="tagline">A journey beyond the stars</p>
+                    <div class="hero-actions">
+                    <a href="detalle.html" class="btn">Comprar boletos</a>
+                    <button class="btn ghost" id="btn-trailer">Ver trailer</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Cartelera: cuadrícula con 5 películas -->
+            <section id="cartelera" class="cartelera container">
+                <h3>Ahora en tu cine</h3>
+                <div class="grid-cartelera">
+                    <!-- Repite/ajusta según necesites -->
+                    <article class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fes.web.img3.acsta.net%2Fpictures%2F19%2F06%2F13%2F09%2F35%2F4216544.jpg&f=1&nofb=1&ipt=193205d303548bda4f9f8750b4513a7148a374642f8027273b75a6db86d22a63" alt="Murder Mystery" />
+                        <div class="card-body">
+                            <h4>Murder Mystery</h4>
+                            <p class="meta">Acción · 120 min</p>
+                            <a href="detalle.html" class="btn small">Ver
+                                detalles</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmir-s3-cdn-cf.behance.net%2Fproject_modules%2F1400%2Fffdc5e90601171.5e1c27d79a475.jpg&f=1&nofb=1&ipt=300b29608735987ea05179c932097d958aaddcab28e39596bacc6faaddc51899" alt="STAR WARS - The Rise Of Skywalker" />
+                        <div class="card-body">
+                            <h4>Rise Of Skywalker</h4>
+                            <p class="meta">Ciencia ficción · 130 min</p>
+                            <a href="detalle.html" class="btn small">Ver
+                                detalles</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Falternativemovieposters.com%2Fwp-content%2Fuploads%2F2021%2F12%2FRichard-Philpott_Jumanji.jpg&f=1&nofb=1&ipt=3ce9b105a9666f2e35a2d8112c9edfba3a46969d134fcf2ab379dce76c7c8fef" alt="Jumanji" />
+                        <div class="card-body">
+                            <h4>Jumanji</h4>
+                            <p class="meta">Aventura · 105 min</p>
+                            <a href="detalle.html" class="btn small">Ver
+                                detalles</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fpics.filmaffinity.com%2Fjujutsu_kaisen_hidden_inventory_premature_death_the_movie-650689952-large.jpg&f=1&nofb=1&ipt=e144e9a7bcdc5879fca5280c69c9262cc29e2087b3ba78d1c9c5fbc8d14e4b60" alt="Jujutsu Kaisen" />
+                        <div class="card-body">
+                            <h4>Jujutsu Kaisen</h4>
+                            <p class="meta">Animación · 115 min</p>
+                            <a href="detalle.html" class="btn small">Ver
+                                detalles</a>
+                        </div>
+                    </article>
+
+                    <article class="card">
+                        <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimage.tmdb.org%2Ft%2Fp%2Foriginal%2F62HCnUTziyWcpDaBO2i1DX17ljH.jpg&f=1&nofb=1&ipt=94bcdfd33be6f757115bfa45d8454cef299d6b57267758820687f8cc9279ffca" alt="Maverick" />
+                        <div class="card-body">
+                            <h4>Maverick</h4>
+                            <p class="meta">Acción · 110 min</p>
+                            <a href="detalle.html" class="btn small">Ver
+                                detalles</a>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Mapa: se inyecta al pulsar "¿Dónde estamos?" -->
+            <section
+                id="map-section"
+                class="map-section container"
+                aria-hidden="true">
+                <h3>Ubicación</h3>
+                <div id="map-container" class="map-container">
+                    <!-- Aquí inyecta main.js el iframe de google maps -->
+                    <p class="hint">
+                        Pulsa "¿Dónde estamos?" en el menú para cargar el mapa.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Contacto / formulario -->
+            <section
+                id="contacto"
+                class="contact container"
+                aria-labelledby="contacto-title">
+                <h3 id="contacto-title">Contacto</h3>
+                <div class="contact-grid">
+                    <form
+                        id="contact-form"
+                        class="contact-form"
+                        action="#"
+                        method="post"
+                        novalidate>
+                        <label for="name">Nombre</label>
+                        <input id="name" name="name" required />
+
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required />
+
+                        <label for="message">Mensaje</label>
+                        <textarea id="message" name="message" rows="5"
+                            required></textarea>
+
+                        <button type="submit"
+                            class="btn primary">Enviar</button>
+                    </form>
+
+                    <aside class="contact-info">
+                        <h4>Horario</h4>
+                        <p>Lun-Dom: 10:00 - 23:00</p>
+
+                        <h4>Teléfono</h4>
+                        <p><a href="tel:+34900111222">+34 900 111 222</a></p>
+
+                        <h4>Email</h4>
+                        <p>
+                            <a
+                                href="mailto:info@cine-ejemplo.com">info@cine.com</a>
+                        </p>
+                    </aside>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-inner">
+                <div class="footer-brand">
+                    <h4>CINE</h4>
+                    <p>Tu cine de confianza</p>
+                </div>
+
+                <div class="footer-contacts">
+                    <p>Montequinto, Sevilla</p>
+                    <p>Tlf: +34 900 123 456</p>
+                </div>
+
+                <div class="socials">
+                    <a href="#" aria-label="Facebook"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="#" aria-label="Twitter"><i
+                            class="fa-brands fa-twitter"></i></a>
+                </div>
+            </div>
+        </footer>
+
+        
+
+        <!-- Popup del trailer -->
+        <div class="trailer-modal" id="trailerModal">
+            <div class="trailer-content">
+                <span class="close-btn" id="closeTrailer">&times;</span>
+                <iframe
+                id="trailerFrame"
+                width="800"
+                height="450"
+                src=""
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+                ></iframe>
+            </div>
+        </div>
+
+
+        <script src="main.js"></script>
+        <script src="https://kit.fontawesome.com/47b78de0a8.js" crossorigin="anonymous"></script>
+    </body>
+</html>
