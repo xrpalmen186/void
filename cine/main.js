@@ -1,5 +1,3 @@
-// main.js - interacción mínima
-
 document.addEventListener('DOMContentLoaded', function () {
     
     //MAPA DE GOOGLE MAPS

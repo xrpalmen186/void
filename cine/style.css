@@ -1,7 +1,7 @@
 /* style.css - paleta ocean blue pastel */
 
 /* -------------------------------
-   FUENTES (Ejemplo para SF Pro descargada)
+   FUENTES (He optado por usar SF Pro Display (la fuente principal de Apple) pues me encanta su diseño)
    Si tienes los .woff2 colócalos en /fonts y descomenta las @font-face.
 ---------------------------------*/
 
@@ -10,21 +10,21 @@
     font-family: "SF Pro Display";
     src: url("fonts/SFProDisplay-Regular.woff2") format("woff2");
     font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+    font-style: normal; /*fuente de texto normal*/
+    font-display: swap; /*estuve leyendo sobre esto y creo que es bastante importante utilizarlo: https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face/font-display*/
 }
 
 @font-face {
     font-family: "SF Pro Display";
     src: url("fonts/SFProDisplay-Bold.woff2") format("woff2");
     font-weight: 700;
-    font-style: bold;
+    font-style: bold; /*para que se use cuando se pone en negrita*/
     font-display: swap;
 }
 
 
 :root {
-    --azul-1: #7EB7E7;
+    --azul-1: #7EB7E7; /*Esta es la paleta de colores que he elegido*/
     --azul-2: #6AA3D9;
     --azul-3: #2E5D8A;
     --azul-4: #E9F4FB;
@@ -41,11 +41,9 @@ body {
     background: var(--azul-4);
     color: #0b2a3f;
     margin: 0;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Contenedor central */
+/* Contenedor general */
 .container {
     max-width: var(--max-width);
     margin: 0 auto;
@@ -54,8 +52,8 @@ body {
 
 /* Header */
 .site-header {
-    background: linear-gradient(180deg, rgb(255, 255, 255), rgb(255, 255, 255));
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    box-shadow: 0 1px 20px #1f496c6d;
     position: sticky;
     top: 0;
     z-index: 20;
@@ -66,10 +64,10 @@ body {
     align-items: center;
     justify-content: space-between;
     gap: var(--gap);
-    padding: 0.5rem 1.5rem;
+    padding: 0.5rem 1.5rem; /*Padding horizontal y vertical para el texto dentro del header*/
 }
 
-.brand h1 {
+.brand h1 { /*Para el título "CINE"*/
     margin: 0;
     letter-spacing: 2px;
     color: var(--azul-3);
@@ -132,9 +130,8 @@ body {
     position: relative;
     width: 100%;
     height: 80vh;
-    /* ajustable, por ejemplo 100vh para pantalla completa */
+    /* imagen de fondo detras de los botones */
     background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwallpapercave.com%2Fwp%2Fwp3614492.jpg&f=1&nofb=1&ipt=817925100c43cf64c67644fb058f9cfe23b8615c298578267aff46d0f08238f5");
-    /* pon aquí tu imagen real */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -150,7 +147,6 @@ body {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.4);
-    /* capa de oscurecimiento */
 }
 
 .hero-content {
@@ -168,8 +164,8 @@ body {
 }
 
 .hero .rating i {
-    color: #f6c85d;
-    margin: 0 2px;
+    color: #f6c85d; /*Color de los iconos delas estrellas*/
+    margin: 0 2px; /*Separacion entre ellas*/
 }
 
 .hero .tagline {
@@ -197,12 +193,6 @@ body {
     color: #4b6f87;
 }
 
-/* rating stars small */
-.rating i {
-    color: #f6c85d;
-    margin-right: 6px;
-}
-
 h3 {
     font-size: 2rem;
 }
@@ -210,7 +200,7 @@ h3 {
 /* Cartelera grid */
 .grid-cartelera {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /*He optado usar auto-fit por que no veo tampoco necesario cambiar manualmente las columnas del grid en cada resolucion con @media*/
     gap: 1rem;
     margin-top: 1rem;
 }
@@ -235,7 +225,7 @@ h3 {
 
 .card img:hover {
     transform: scale(1.05);
-    filter: blur(1px);
+    filter: grayscale(0.5);
     transition: all 0.2s ease-in-out;
 }
 
@@ -251,10 +241,11 @@ h3 {
     color: var(--azul-3);
 }
 
-.card-body .meta {
+.card-body .meta { /*para los metadatos de cada peli*/
     color: #6a8aa3;
     font-size: 0.9rem;
 }
+
 
 /* Map section */
 .map-section {
@@ -273,24 +264,6 @@ h3 {
     transition: all 2s ease-in-out;
 }
 
-
-/* .map-container:hover {
-    animation: girar 15s infinite ;
-    transition: all 2s ease-in-out;
-}
-
-@keyframes girar {
-    0% {
-        transform: rotateZ(0deg) scale(1);
-    }
-    50% {
-        transform: rotateZ(3600deg) scale(2) translateX(30px) perspective(50px) rotateY(50deg) rotateX(25deg);
-    }
-    100% {
-        transform: rotateZ(0deg) scale(1);
-
-    }
-} */
 
 /* Contact */
 .contact-grid {
@@ -325,7 +298,7 @@ h3 {
 
 /* Footer */
 .site-footer {
-    margin-top: 2rem;
+    margin-top: 5rem;
     background-color: var(--azul-5);
     color: var(--azul-4);
     padding: 1.2rem 0;
@@ -344,10 +317,12 @@ h3 {
     text-decoration: none;
 }
 
-/* ===== TRAILER POPUP ===== */
+/* POP UP DEL TRAILER */
 .trailer-modal {
     display: none;
-    /* oculto por defecto */
+    /* oculto por defecto, luego en el JS lo muestro */
+
+    /* el "position: fixed" hace que el elemento sea fijo en la pantalla, sin importar el flujo normal del documento. De esta forma, el modal se superpone sobre el contenido de la página. */
     position: fixed;
     z-index: 1000;
     inset: 0;
@@ -394,6 +369,9 @@ h3 {
     background-color: #ffd7d71f;
 }
 
+
+
+
 /* Responsive */
 @media (max-width: 768px) {
 
@@ -410,7 +388,6 @@ h3 {
 }
 
 
-/* Responsiveness */
 @media (max-width:900px) {
     .hero {
         height: 60vh;
