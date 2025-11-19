@@ -1,0 +1,293 @@
+@font-face {
+    font-family: "ElmsSans";
+    src: url("font/ElmsSans-Regular.ttf") format("woff2");
+    font-weight: 400;
+    font-style: normal; /*fuente de texto normal*/
+    font-display: swap; /*estuve leyendo sobre esto y creo que es bastante importante utilizarlo: https://developer.mozilla.org/es/docs/Web/CSS/Reference/At-rules/@font-face/font-display*/
+}
+
+@font-face {
+    font-family: "ElmsSans";
+    src: url("font/ElmsSans-SemiBold.ttf") format("woff2");
+    font-weight: 700;
+    font-style: bold; /*para que se use cuando se pone en negrita*/
+    font-display: swap;
+}
+
+:root {
+    --background: #fff;
+    --text: #000;
+}
+
+body {
+    font-family: "ElmsSans", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    margin: 0;
+}
+
+.container {
+    max-width: 1200px;;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+
+header {
+    background-color: var(--background);
+    box-shadow: 0 1px 10px #0000005b;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 0.5rem 1.5rem;
+}
+
+.brand h1 {
+    margin: 0;
+    letter-spacing: 1px;
+    color: var(--text);
+}
+
+.brand {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+nav ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text);
+    padding: 0.4rem 0.6rem;
+    border-radius: 8px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+
+.btn {
+    display: inline-block;
+    margin-top: 3rem;
+    padding: 0.8rem 2rem;
+    border-radius: 999px;
+    text-decoration: none;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    background: var(--background);
+    color: var(--text);
+    font-weight: 600;
+}
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background-image: url("images/hero.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+}
+
+.hero::before { /* esto crea una capa virtual con la que podré darle un fondo más oscuro */
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+}
+
+.hero-content { /*para situar el texto ENCIMA del fondo*/
+    position: relative;
+    z-index: 2;
+    max-width: 700px;
+}
+
+.hero .title {
+    font-size: 5rem;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.hero-actions {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-fotos {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+        "card1 card2 card3"
+        "card4 card4 card5";
+}
+
+.card:nth-child(1) { grid-area: card1; }
+.card:nth-child(2) { grid-area: card2; }
+.card:nth-child(3) { grid-area: card3; }
+.card:nth-child(4) { grid-area: card4; }
+.card:nth-child(5) { grid-area: card5; }
+
+
+.card {
+    background: white;
+    overflow: hidden;
+    box-shadow: 0 6px 18px rgba(11, 42, 63, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.card img:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+    transition: all 0.2s ease-in-out;
+}
+
+
+footer {
+    margin-top: 5rem;
+    background-color: #000;
+    color: #fff;
+    padding: 1.2rem 0;
+}
+
+.footer-inner {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+.footer-contacts-container {
+    display: flex;
+    gap: 5rem;
+}
+
+.footer-contacts-1 {
+    text-align: right;
+}
+
+.footer-contacts-2 {
+    text-align: left;
+}
+
+
+/*Tema oscuro por defecto*/
+/*DESCOMENTA ESTE BLOQUE PARA VER LA WEB EN MODO OSCURO*/
+
+
+/* @media (prefers-color-scheme: dark) {
+    body {
+        background-color: #000;
+        color: #fff;
+    }
+
+    header {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .brand h1 {
+        color: #fff;
+    }
+
+    nav a {
+        color: #fff;
+    }
+
+    .btn {
+        background-color: #000;
+        color: #fff;
+    }
+
+    .brand-logo {
+        filter: invert();
+    }
+} */
+
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.6rem;
+    }
+
+    .footer-contacts-1 {
+        text-align: left;
+    }
+
+    .footer-contacts-2 {
+        text-align: right;
+    }
+}
+
+
+@media (max-width:900px) {
+
+    .hero {
+        height: 50vh;
+    }
+
+    .hero .title {
+        font-size: 2.2rem;
+    }
+
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+
+    .grid-fotos  {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "card1 card2"
+            "card4 card4"
+            "card3 card5";
+    }
+
+    h4 {
+        font-size: 1.1rem;
+    }
+}
