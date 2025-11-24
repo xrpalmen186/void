@@ -1,0 +1,154 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+    padding: 16px 0;
+}
+
+/* (Ejercicio 2) */
+
+#grid {
+    margin: 0 auto;
+    width: 60vw;
+    height: 80vh;
+    transition: 500ms;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    background: #fff;
+    border: 1px solid #fff;
+    border-radius: 24px;
+}
+
+#grid:has(.left:hover) {
+    grid-template-columns: 2fr 0.5fr 0.5fr;
+}
+
+#grid:has(.center:hover) {
+    grid-template-columns: 0.5fr 2fr 0.5fr;
+}
+
+#grid:has(.right:hover) {
+    grid-template-columns: 0.5fr 0.5fr 2fr;
+}
+
+.left {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.knowitalljoe.com%2Fwp-content%2Fuploads%2F2015%2F10%2FStar-Wars-The-Force-Awakens-Poster.jpg&f=1&nofb=1&ipt=c94c85653d011ea0a1102f14d3166a78f573a421170010b0007bb63bc0dc2f82");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 24px 0 0 24px;
+}
+
+.center {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmlpnk72yciwc.i.optimole.com%2FcqhiHLc.IIZS~2ef73%2Fw%3Aauto%2Fh%3Aauto%2Fq%3A75%2Fhttps%3A%2F%2Fbleedingcool.com%2Fwp-content%2Fuploads%2F2023%2F05%2FFxd_-syXoAAY2bh.jpg&f=1&nofb=1&ipt=67193a04ea29a2fe86861d038235fb214bfdb68863c014924cce0b26f8df7d05");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.right {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fartofthemovies.co.uk%2Fcdn%2Fshop%2Ffiles%2FIMG_7648.jpg%3Fv%3D1720454458&f=1&nofb=1&ipt=1f03111094fe9d183afab9b4785eef4c259e4ba1120fd103c6868ddbf774803f");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 0 24px 24px 0;
+}
+
+/* (Ejercicio 1) */
+
+.ej1 {
+    padding: 32px 16px 64px;
+    background: #111;
+}
+
+.products-grid {
+    max-width: 750px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 3px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 24px;
+    height: 400px;
+    cursor: pointer;
+    color: #fff;
+    border: 1px solid #ffffff8a;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1);
+    transform: scale(1);
+    transition: transform 400ms ease, filter 400ms ease;
+}
+
+.card:nth-child(1)::before {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.tasteatlas.com%2Fimages%2Fdishes%2F8a8fcb9de02a4bd5bf6113ffb2777f13.jpg%3Fw%3D600&f=1&nofb=1&ipt=cb0520acceb34f13f8cbdd19c162ab4ef95adee55a2c2e48a516626a3ccfb181");
+}
+
+.card:nth-child(2)::before {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthumbs.dreamstime.com%2Fb%2Fconjunto-de-sushi-maki-simple-aislado-en-un-fondo-blanco-255466409.jpg&f=1&nofb=1&ipt=9f7b540d9823e459fef30173b83b3374063681bbb9f3308f67c4335303672e85");
+}
+
+.card:nth-child(3)::before {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi0.wp.com%2Fthehappening.com%2Fwp-content%2Fuploads%2F2016%2F10%2Frokai-sushi.jpg%3Fresize%3D940%252C637%26ssl%3D1&f=1&nofb=1&ipt=1fbef2cfa2fff6401d1911f4b276441b88e14ef8eb210b18275a3699a465f2f5");
+}
+
+.card:nth-child(4)::before {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.takeaway.com%2Fbe%2Ffoodwiki%2Fuploads%2Fsites%2F2%2F2017%2F05%2Framen-3-e1511359817885.jpg&f=1&nofb=1&ipt=30a982531ad1cf7f46fea79f834e23f316ed622fc6df23fa18e61ac20c37aef6");
+}
+
+.card-content {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    padding: 15px;
+    transform: translateY(0);
+    transition: transform 400ms ease;
+    border-radius: 24px 24px 0 0;
+    background-color: #fff;
+    color: #000;
+}
+
+.card h2 {
+    margin: 0;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.card p {
+    margin: 12px 0 0;
+    font-size: 0.9rem;
+    opacity: 0;
+    max-height: 0;
+    transform: translateY(100px);
+    transition: opacity 0.5s ease, transform 0.5s ease, max-height 0.5s ease;
+}
+
+.card:hover::before {
+    transform: scale(1.05);
+    filter: grayscale(0);
+}
+
+.card:hover p {
+    opacity: 1;
+    max-height: 200px;
+    transform: translateY(0);
+}
