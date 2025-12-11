@@ -1,0 +1,174 @@
+<!-- Archivo: layout_practica.html -->
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Layout - Práctica Bootstrap</title>
+
+    <!-- Bootstrap CSS (CDN) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        /* Estilos simples para bloques visuales */
+        .block {
+            background: linear-gradient(135deg, rgba(255, 145, 0, 0.08), rgba(108, 117, 125, 0.04));
+            border: 1px solid rgba(0, 0, 0, 0.06);
+            padding: 1.25rem;
+            border-radius: .5rem;
+            min-height: 6rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .block-ghost {
+            background: rgba(0, 0, 0, 0.02);
+            border: 1px dashed rgba(5, 3, 3, 0.06);
+        }
+
+        .section-title {
+            font-weight: 600;
+            margin-bottom: .75rem;
+        }
+
+        /* Para la fila de altura fija (sección 4) */
+        .fixed-row {
+            height: 220px;
+            background: linear-gradient(180deg, rgba(40, 167, 69, 0.04), rgba(108, 117, 125, 0.02));
+            border-radius: .5rem;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+            padding: 1rem;
+        }
+
+        body {
+            padding: 2rem;
+            background: #f8f9fa;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- 1. Encabezado centrado -->
+        <header class="my-4">
+            <!-- Col única, centrada horizontalmente; más estrecha en pantallas grandes y más ancha en pequeñas -->
+            <div class="row">
+                <div class="col-12 col-lg-8 col-xl-6 mx-auto text-center">
+                    <h1 class="mb-2">Centrando horizontalmente su contenido</h1>
+                    <p class="text-muted mb-0">Mostrando una sola columna que se ajusta equilibradamente en distintos
+                        tamaños de pantalla.</p>
+                </div>
+            </div>
+        </header>
+
+        <hr />
+
+        <!-- 2. Sección de tres bloques responsive -->
+        <section class="my-4">
+            <h2 class="section-title">Sección de tres bloques responsive</h2>
+            <div class="row g-3">
+                <!-- En pantallas pequeñas (col-12) uno debajo de otro;
+             en md (>=768px) dos por fila (col-md-6);
+             en lg (>=992px) tres en una fila (col-lg-4) -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="block">Bloque 1</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="block">Bloque 2</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="block">Bloque 3</div>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- 3. Sección con columnas de tamaños diferentes -->
+        <section class="my-4">
+            <h2 class="section-title">Sección con columnas de tamaños diferentes</h2>
+            <div class="row g-3">
+                <!-- Combinación fija (suma = 12). Usamos col-3 / col-6 / col-3
+             (comportamiento NO cambia con el tamaño de pantalla) -->
+                <div class="col-3">
+                    <div class="block block-ghost">Lateral (col-3)</div>
+                </div>
+                <div class="col-6">
+                    <div class="block">Central — más ancho (col-6)</div>
+                </div>
+                <div class="col-3">
+                    <div class="block block-ghost">Lateral (col-3)</div>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- 4. Sección alineada verticalmente -->
+        <section class="my-4">
+            <h2 class="section-title">Sección alineada verticalmente</h2>
+            <!-- Usamos align-items-center para centrar verticalmente el contenido de las columnas.
+           La fila tiene altura fija mediante la clase .fixed-row -->
+            <div class="row fixed-row align-items-center">
+                <div class="col-6">
+                    <div class="block">Columna A (centrada verticalmente)</div>
+                </div>
+                <div class="col-6">
+                    <div class="block block-ghost">Columna B (centrada verticalmente)</div>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- 5. Sección con contenido flexible y contenido ajustado -->
+        <section class="my-4">
+            <h2 class="section-title">Contenido flexible y contenido ajustado</h2>
+            <div class="row g-3">
+                <!-- col-auto se ajusta exactamente al texto; col ocupa el resto -->
+                <div class="col-auto">
+                    <div class="block">Ajustado al texto (col-auto)</div>
+                </div>
+                <div class="col">
+                    <div class="block">Ocupa el resto del espacio disponible (col)</div>
+                </div>
+            </div>
+        </section>
+
+        <hr />
+
+        <!-- 6. Rejilla final de cuatro elementos -->
+        <section class="my-4">
+            <h2 class="section-title">Rejilla final de cuatro elementos</h2>
+            <!-- row con gap uniforme (g-3).
+           En pantallas pequeñas: col-12 (1 por fila)
+           En pantallas medianas: col-md-6 (2 por fila)
+           En pantallas grandes: col-lg-3 (4 por fila) -->
+            <div class="row g-3">
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="block">Elemento 1</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="block">Elemento 2</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="block">Elemento 3</div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-3">
+                    <div class="block">Elemento 4</div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Bootstrap JS (opcional: para componentes JS si se usan) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
