@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laboratorio de Animaciones y Multimedia</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1 class="animate-charcter">Guía de Estudio: Interfaces Web</h1>
+        <p>Animaciones CSS, Transiciones y Multimedia</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>1. Grid de Animaciones (Keyframes y Hovers)</h2>
+            <div class="animation-grid">
+                <div class="card bounce">Bounce</div>
+                <div class="card pulse">Pulse</div>
+                <div class="card spin">Spin (Hover)</div>
+                <div class="card shake">Shake</div>
+                <div class="card fade-in">Fade In</div>
+                <div class="card color-change">Color Cycle</div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section>
+            <h2>2. Efectos de Texto</h2>
+            <p class="text-typing">Texto con efecto máquina de escribir...</p>
+            <p class="text-glow">Texto con resplandor neón</p>
+            <button class="btn-hover">Botón con Efecto</button>
+        </section>
+
+        <hr>
+
+        <section class="multimedia-section">
+            <h2>3. Etiquetas Multimedia (Audio y Video)</h2>
+            
+            <div class="media-container">
+                <article>
+                    <h3>Etiqueta &lt;video&gt;</h3>
+                    <p>Atributos clave: <code>controls, autoplay, loop, muted, poster</code></p>
+                    <video width="320" height="240" controls poster="https://via.placeholder.com/320x240?text=Poster+del+Video">
+                        <source src="https://jsoncompare.org/LearningContainer/SampleFiles/Video/MP4/Sample-MP4-Video-File-for-Testing.mp4" type="video/mp4">
+                        Tu navegador no soporta el formato de video.
+                    </video>
+                </article>
+
+                <article>
+                    <h3>Etiqueta &lt;audio&gt;</h3>
+                    <p>Atributos clave: <code>controls, autoplay, loop, muted</code></p>
+                    <audio controls>
+                        <source src="sample.wav" type="audio/mpeg">
+                        Tu navegador no soporta el formato de audio.
+                    </audio>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Práctica de examen - Interfaces Web 2024</p>
+    </footer>
+
+</body>
+</html>
