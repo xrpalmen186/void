@@ -1,0 +1,17 @@
+body {
+    font-family: system-ui, sans-serif;
+    background-color: #aaa;
+    color: #1e293b;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+.media-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    background: #eee;
+    padding: 20px;
+    border-radius: 15px;
+}

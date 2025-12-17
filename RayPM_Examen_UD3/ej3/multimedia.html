@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3</title>
+  <link rel="stylesheet" href="multimedia.css">
+</head>
+<body>
+  <div class="media-container">
+      <article>
+          <h3>Video</h3>
+          <video width="600" controls poster="portada.jpg">
+              <source src="volando.mp4" type="video/mp4">
+              Tu navegador no soporta el formato de video.
+          </video>
+      </article>
+
+      <!-- EL AUDIO NO SE REPRODUCE AUTOMATICAMENTE: Esto es debido a cambios de seguridad importantes en Chrome para evitar que se reproduzcan automáticamente los sonidos de manera maliciosa y saturen al usuario, a veces funciona, y a veces no, pero bueno, yo puse el "autuplay" igualmente ya que es el atributo necesario para ello. -->
+      <article>
+          <h3>Audio</h3>
+          <audio autoplay controls>
+              <source src="celestial-blues.mp3" type="audio/mpeg">
+              Tu navegador no soporta el formato de audio.
+          </audio>
+      </article>
+  </div>
+</body>
+</html>

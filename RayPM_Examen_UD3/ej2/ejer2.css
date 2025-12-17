@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #aaa;
+}
+
+.cards {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.card {
+    background-color: #ebebeb;
+    padding: 20px;
+    border-radius: 14px;
+    width: 200px;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #303030af;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 12px;
+    transition: transform 0.8s ease;
+}
+
+.card:hover img {
+    transform: rotateZ(-15deg);
+}
+
+.card p {
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .cards {
+        margin: 0 auto;
+        flex-direction: column;
+    }
+}

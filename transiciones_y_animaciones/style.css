@@ -1,3 +1,5 @@
+
+
 body {
     margin: 0;
     font-family: system-ui, sans-serif;
@@ -38,7 +40,7 @@ body {
 }
 
 .left {
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.knowitalljoe.com%2Fwp-content%2Fuploads%2F2015%2F10%2FStar-Wars-The-Force-Awakens-Poster.jpg&f=1&nofb=1&ipt=c94c85653d011ea0a1102f14d3166a78f573a421170010b0007bb63bc0dc2f82");
+    background-color: #aaa;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -46,14 +48,14 @@ body {
 }
 
 .center {
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmlpnk72yciwc.i.optimole.com%2FcqhiHLc.IIZS~2ef73%2Fw%3Aauto%2Fh%3Aauto%2Fq%3A75%2Fhttps%3A%2F%2Fbleedingcool.com%2Fwp-content%2Fuploads%2F2023%2F05%2FFxd_-syXoAAY2bh.jpg&f=1&nofb=1&ipt=67193a04ea29a2fe86861d038235fb214bfdb68863c014924cce0b26f8df7d05");
+    background-color: #ccc;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
 }
 
 .right {
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fartofthemovies.co.uk%2Fcdn%2Fshop%2Ffiles%2FIMG_7648.jpg%3Fv%3D1720454458&f=1&nofb=1&ipt=1f03111094fe9d183afab9b4785eef4c259e4ba1120fd103c6868ddbf774803f");
+    background-color: #ddd;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

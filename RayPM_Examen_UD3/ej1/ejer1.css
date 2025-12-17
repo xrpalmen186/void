@@ -1,0 +1,42 @@
+:root {
+    --ancho-izq: 50px;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    background: #111;
+    color: #fff;
+}
+
+#contenedor {
+    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    transition: 500ms;
+    display: grid;
+    grid-template-columns: var(--ancho-izq) 1fr;
+    background: #fff;
+}
+
+#contenedor:has(#left:hover) {
+    grid-template-columns: 40% 1fr;
+}
+
+#contenedor:has(#right:hover) {
+    grid-template-columns: var(--ancho-izq) 1fr;
+}
+
+#left {
+    background-color: #8d8d8d;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#right {
+    background-color: #5c5c5c;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
